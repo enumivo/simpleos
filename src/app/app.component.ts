@@ -13,8 +13,8 @@ export class AppComponent {
   constructor(private eos: EOSJSService,
               private router: Router,
               public aService: AccountsService) {
-    const endpoint = 'http://br.eosrio.io:8080';
-    const chain_id = 'aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906';
+    const endpoint = 'http://45.33.118.116:8000';
+    const chain_id = 'cf057bbfb72640471fd910bcb67639c22df9f92470936cddc1ade0e2f2e7dc4f';
     this.eos.init(endpoint, chain_id).then((savedAccounts: any) => {
       if (savedAccounts) {
         if (savedAccounts.length > 0) {
