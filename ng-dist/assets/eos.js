@@ -111,8 +111,8 @@ module.exports = AssetCache;
 
 function AssetCache(network) {
   var cache = {
-    'SYS@eosio.token': { precision: 4 },
-    'EOS@eosio.token': { precision: 4 }
+    'SYS@enu.token': { precision: 4 },
+    'ENU@enu.token': { precision: 4 }
 
     /**
       @return {Promise} {precision}
@@ -122,8 +122,8 @@ function AssetCache(network) {
     assert(symbol, 'required symbol');
     assert(contract, 'required contract');
 
-    if (contract === 'eosio') {
-      contract = 'eosio.token';
+    if (contract === 'enumivo') {
+      contract = 'enu.token';
     }
 
     var extendedAsset = symbol + '@' + contract;
@@ -176,8 +176,8 @@ function AssetCache(network) {
     assert(symbol, 'required symbol');
     assert(contract, 'required contract');
 
-    if (contract === 'eosio') {
-      contract = 'eosio.token';
+    if (contract === 'enumivo') {
+      contract = 'enu.token';
     }
 
     var extendedAsset = symbol + '@' + contract;
@@ -1204,7 +1204,7 @@ module.exports={
     "base": "",
     "action": {
       "name": "bidname",
-      "account": "eosio"
+      "account": "enumivo"
     },
     "fields": {
       "bidder": "account_name",
@@ -1238,7 +1238,7 @@ module.exports={
     "base": "",
     "action": {
       "name": "buyram",
-      "account": "eosio"
+      "account": "enumivo"
     },
     "fields": {
       "payer": "account_name",
@@ -1250,7 +1250,7 @@ module.exports={
     "base": "",
     "action": {
       "name": "buyrambytes",
-      "account": "eosio"
+      "account": "enumivo"
     },
     "fields": {
       "payer": "account_name",
@@ -1262,7 +1262,7 @@ module.exports={
     "base": "",
     "action": {
       "name": "canceldelay",
-      "account": "eosio"
+      "account": "enumivo"
     },
     "fields": {
       "canceling_auth": "permission_level",
@@ -1273,7 +1273,7 @@ module.exports={
     "base": "",
     "action": {
       "name": "claimrewards",
-      "account": "eosio"
+      "account": "enumivo"
     },
     "fields": {
       "owner": "account_name"
@@ -1290,7 +1290,7 @@ module.exports={
     "base": "",
     "action": {
       "name": "delegatebw",
-      "account": "eosio"
+      "account": "enumivo"
     },
     "fields": {
       "from": "account_name",
@@ -1313,7 +1313,7 @@ module.exports={
     "base": "",
     "action": {
       "name": "deleteauth",
-      "account": "eosio"
+      "account": "enumivo"
     },
     "fields": {
       "account": "account_name",
@@ -1357,7 +1357,7 @@ module.exports={
     "base": "",
     "action": {
       "name": "linkauth",
-      "account": "eosio"
+      "account": "enumivo"
     },
     "fields": {
       "account": "account_name",
@@ -1370,7 +1370,7 @@ module.exports={
     "base": "",
     "action": {
       "name": "newaccount",
-      "account": "eosio"
+      "account": "enumivo"
     },
     "fields": {
       "creator": "account_name",
@@ -1383,7 +1383,7 @@ module.exports={
     "base": "",
     "action": {
       "name": "onerror",
-      "account": "eosio"
+      "account": "enumivo"
     },
     "fields": {
       "sender_id": "uint128",
@@ -1429,7 +1429,7 @@ module.exports={
     "base": "",
     "action": {
       "name": "refund",
-      "account": "eosio"
+      "account": "enumivo"
     },
     "fields": {
       "owner": "account_name"
@@ -1448,7 +1448,7 @@ module.exports={
     "base": "",
     "action": {
       "name": "regproducer",
-      "account": "eosio"
+      "account": "enumivo"
     },
     "fields": {
       "producer": "account_name",
@@ -1461,7 +1461,7 @@ module.exports={
     "base": "",
     "action": {
       "name": "regproxy",
-      "account": "eosio"
+      "account": "enumivo"
     },
     "fields": {
       "proxy": "account_name",
@@ -1472,7 +1472,7 @@ module.exports={
     "base": "",
     "action": {
       "name": "reqauth",
-      "account": "eosio"
+      "account": "enumivo"
     },
     "fields": {
       "from": "account_name"
@@ -1482,7 +1482,7 @@ module.exports={
     "base": "",
     "action": {
       "name": "rmvproducer",
-      "account": "eosio"
+      "account": "enumivo"
     },
     "fields": {
       "producer": "account_name"
@@ -1492,7 +1492,7 @@ module.exports={
     "base": "",
     "action": {
       "name": "sellram",
-      "account": "eosio"
+      "account": "enumivo"
     },
     "fields": {
       "account": "account_name",
@@ -1503,7 +1503,7 @@ module.exports={
     "base": "",
     "action": {
       "name": "setalimits",
-      "account": "eosio"
+      "account": "enumivo"
     },
     "fields": {
       "account": "account_name",
@@ -1516,7 +1516,7 @@ module.exports={
     "base": "",
     "action": {
       "name": "setglimits",
-      "account": "eosio"
+      "account": "enumivo"
     },
     "fields": {
       "cpu_usec_per_period": "int64"
@@ -1526,7 +1526,7 @@ module.exports={
     "base": "",
     "action": {
       "name": "setprods",
-      "account": "eosio"
+      "account": "enumivo"
     },
     "fields": {
       "schedule": "producer_key[]"
@@ -1536,7 +1536,7 @@ module.exports={
     "base": "",
     "action": {
       "name": "setabi",
-      "account": "eosio"
+      "account": "enumivo"
     },
     "fields": {
       "account": "account_name",
@@ -1547,7 +1547,7 @@ module.exports={
     "base": "",
     "action": {
       "name": "setcode",
-      "account": "eosio"
+      "account": "enumivo"
     },
     "fields": {
       "account": "account_name",
@@ -1560,7 +1560,7 @@ module.exports={
     "base": "",
     "action": {
       "name": "setparams",
-      "account": "eosio"
+      "account": "enumivo"
     },
     "fields": {
       "params": "blockchain_parameters"
@@ -1570,7 +1570,7 @@ module.exports={
     "base": "",
     "action": {
       "name": "setpriv",
-      "account": "eosio"
+      "account": "enumivo"
     },
     "fields": {
       "account": "account_name",
@@ -1581,7 +1581,7 @@ module.exports={
     "base": "",
     "action": {
       "name": "setram",
-      "account": "eosio"
+      "account": "enumivo"
     },
     "fields": {
       "max_ram_size": "uint64"
@@ -1601,7 +1601,7 @@ module.exports={
     "base": "",
     "action": {
       "name": "undelegatebw",
-      "account": "eosio"
+      "account": "enumivo"
     },
     "fields": {
       "from": "account_name",
@@ -1614,7 +1614,7 @@ module.exports={
     "base": "",
     "action": {
       "name": "unlinkauth",
-      "account": "eosio"
+      "account": "enumivo"
     },
     "fields": {
       "account": "account_name",
@@ -1626,7 +1626,7 @@ module.exports={
     "base": "",
     "action": {
       "name": "unregprod",
-      "account": "eosio"
+      "account": "enumivo"
     },
     "fields": {
       "producer": "account_name"
@@ -1636,7 +1636,7 @@ module.exports={
     "base": "",
     "action": {
       "name": "updateauth",
-      "account": "eosio"
+      "account": "enumivo"
     },
     "fields": {
       "account": "account_name",
@@ -1658,7 +1658,7 @@ module.exports={
     "base": "",
     "action": {
       "name": "voteproducer",
-      "account": "eosio"
+      "account": "enumivo"
     },
     "fields": {
       "voter": "account_name",
@@ -1703,7 +1703,7 @@ module.exports={
     "base": "",
     "action": {
       "name": "create",
-      "account": "eosio.token"
+      "account": "enu.token"
     },
     "fields": {
       "issuer": "account_name",
@@ -1722,7 +1722,7 @@ module.exports={
     "base": "",
     "action": {
       "name": "issue",
-      "account": "eosio.token"
+      "account": "enu.token"
     },
     "fields": {
       "to": "account_name",
@@ -1734,7 +1734,7 @@ module.exports={
     "base": "",
     "action": {
       "name": "transfer",
-      "account": "eosio.token"
+      "account": "enu.token"
     },
     "fields": {
       "from": "account_name",
@@ -1786,7 +1786,7 @@ module.exports = function () {
   var extendedSchema = arguments[1];
 
   var structLookup = function structLookup(lookupName, account) {
-    var cachedCode = new Set(['eosio', 'eosio.token']);
+    var cachedCode = new Set(['enumivo', 'enu.token']);
     if (cachedCode.has(account)) {
       return structs[lookupName];
     }
@@ -1998,7 +1998,7 @@ var PublicKeyEcc = function PublicKeyEcc(validation) {
 /** @private */
 function precisionCache(assetCache, value) {
   var symbolInfo = parseExtendedAsset(value);
-  var contract = symbolInfo.contract || 'eosio.token';
+  var contract = symbolInfo.contract || 'enu.token';
 
   var precision = void 0;
 
@@ -2307,7 +2307,7 @@ var ExtendedAsset = function ExtendedAsset(assetCache) {
             amount: '1.0000',
             precision: 4,
             symbol: 'SYS',
-            contract: 'eosio.token'
+            contract: 'enu.token'
           };
         }
 
@@ -2401,7 +2401,7 @@ var abiOverride = function abiOverride(structLookup) {
           object = _ref.object,
           b = _ref.b;
 
-      var ser = structLookup('abi_def', 'eosio');
+      var ser = structLookup('abi_def', 'enumivo');
       var b2 = new ByteBuffer(ByteBuffer.DEFAULT_CAPACITY, ByteBuffer.LITTLE_ENDIAN);
       ser.appendByteBuffer(b2, object.abi);
       b.writeVarint32(b2.offset); // length prefix
@@ -2733,7 +2733,7 @@ function WriteApi(Network, network, config, Transaction) {
               abiPromises = [];
               // Eos contract operations are cached (efficient and offline transactions)
 
-              cachedCode = new Set(['eosio', 'eosio.token']);
+              cachedCode = new Set(['enumivo', 'enu.token']);
 
               accounts.forEach(function (account) {
                 if (!cachedCode.has(account)) {
@@ -2873,7 +2873,7 @@ function WriteApi(Network, network, config, Transaction) {
   }
 
   function genMethod(type, definition, transactionArg) {
-    var account = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 'eosio.token';
+    var account = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 'enu.token';
     var name = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : type;
 
     return function () {
@@ -3294,7 +3294,7 @@ function usage(type, definition, Network, account, config) {
   out();
 
   var struct = void 0;
-  if (account === 'eosio' || account === 'eosio.token') {
+  if (account === 'enumivo' || account === 'enu.token') {
     var _Structs = Structs(Object.assign({ defaults: true, network: Network }, config)),
         structs = _Structs.structs;
 

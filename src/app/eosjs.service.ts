@@ -76,7 +76,7 @@ export class EOSJSService {
           savedAcc = JSON.parse(savedpayload).accounts;
           this.loadHistory();
         }
-        this.eos['contract']('eosio').then(contract => {
+        this.eos['contract']('enumivo').then(contract => {
           this.eosio = contract;
           resolve(savedAcc);
         });
@@ -97,8 +97,8 @@ export class EOSJSService {
   getChainInfo(): Promise<any> {
     return this.eos['getTableRows']({
       json: true,
-      code: 'eosio',
-      scope: 'eosio',
+      code: 'enumivo',
+      scope: 'enumivo',
       table: 'global'
     });
   }
@@ -161,7 +161,7 @@ export class EOSJSService {
   }
 
   getTokens(name) {
-    return this.eos['getCurrencyBalance']('eosio.token', name);
+    return this.eos['getCurrencyBalance']('enu.token', name);
   }
 
   getTransaction(hash) {
@@ -176,7 +176,7 @@ export class EOSJSService {
   }
 
   getConstitution() {
-    this.eos['getCode']('eosio').then((code) => {
+    this.eos['getCode']('enumivo').then((code) => {
       const temp = code['abi']['ricardian_clauses'][0]['body'];
       this.constitution = temp.replace(/(?:\r\n|\r|\n)/g, '<br>');
     });
@@ -199,7 +199,7 @@ export class EOSJSService {
             let type = '';
             let memo = '';
 
-            if (action['account'] === 'eosio.token' && action['name'] === 'transfer') {
+            if (action['account'] === 'enu.token' && action['name'] === 'transfer') {
               amount = action['data']['quantity'];
               user = action['data']['to'];
               memo = action['data']['memo'];
@@ -208,7 +208,7 @@ export class EOSJSService {
             let votedProducers = null;
             let proxy = null;
             let voter = null;
-            if (action['account'] === 'eosio' && action['name'] === 'voteproducer') {
+            if (action['account'] === 'enumivo' && action['name'] === 'voteproducer') {
               votedProducers = action['data']['producers'];
               proxy = action['data']['proxy'];
               voter = action['data']['voter'];
